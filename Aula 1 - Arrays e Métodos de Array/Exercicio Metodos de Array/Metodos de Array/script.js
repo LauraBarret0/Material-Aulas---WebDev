@@ -91,20 +91,24 @@ function executarForEach() {
 
 function executarMap() {
   const array = ['🍎', '🍌', '🍇'];
-  array.map((pegaItem) => console.log(pegaItem + '✅'))
-  const resultado = 'Resultado da operação map';
+  // array.map((pegaItem) => console.log(pegaItem + '✅'))
+  const resultado = array.map(pegaItem => `'✅' ${pegaItem}`);
   document.getElementById('resultado-map').textContent = resultado;
 }
 
  function executarMapHTML() {
     const dispositivos = ['🎮', '🕹️', '💻'];
-    const resultado = 'Resultado da operação map inserindo HTML';
+    const resultado = dispositivos.map((pegaItem, index) => {
+      return `<h1> Item ${index + 1} em promoção!</h1>
+        <p> ${pegaItem} </p>
+      `
+    });
     document.getElementById('resultado-map-html').innerHTML = resultado.join('<br>');
   }
 
 function executarFilter() {
   const array = ['🍎', '🍌', '🍇'];
-  const resultado = 'Resultado da operação filter';
+  const resultado = array.filter(pegaItem => pegaItem === '🍎');
   document.getElementById('resultado-filter').textContent = resultado;
 }
 
