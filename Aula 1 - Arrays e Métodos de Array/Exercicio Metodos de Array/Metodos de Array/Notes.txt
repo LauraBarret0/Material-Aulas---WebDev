@@ -1,0 +1,9 @@
+//Declara array 
+let nomes = ['Laura', 1, 'Fulano']
+console.log(nomes[2])
+
+//Atualizar um item 
+nomes[2] = 'Vini'
+
+//Tamanho array
+nomes.lenght 

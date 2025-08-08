@@ -1,52 +1,63 @@
 function executarPush() {
+  // Adiciona no Final
   const array = ['🍎', '🍌'];
+  array.push('🍇');
   const resultado = array;
   document.getElementById('resultado-push').textContent = resultado;
 }
 
 function executarPop() {
+  // Remove o último elemento
   const array = ['🍎', '🍌', '🍇'];
+  array.pop()
   const resultado = array;
   document.getElementById('resultado-pop').textContent = resultado;
 }
 
 function executarShift() {
+  // Remove o primeiro elemento
   const array = ['🍎', '🍌', '🍇'];
+  array.shift()
   const resultado = array;
   document.getElementById('resultado-shift').textContent = resultado;
 }
 
 function executarUnshift() {
+  // Adiciona no início
   const array = ['🍌', '🍇'];
-  const resultado = 'Resultado da operação unshift';
+  array.unshift('🍓')
+  const resultado = array;
   document.getElementById('resultado-unshift').textContent = resultado;
 }
 
 function executarIncludes() {
+  // Retorna True or False
   const array =  ['🍎', '🍌', '🍇'];
-  const resultado = array;
+  const resultado = array.includes('🥝');
   document.getElementById('resultado-includes').textContent = resultado;
 }
 
 function executarReverse() {
+  // Inverte a ordem da lista
   const array = ['🍎', '🍌', '🍇'];
-  const resultado = array;
+  const resultado = array.reverse();
   document.getElementById('resultado-reverse').textContent = resultado;
 }
 
 function executarSort() {
-  const array = [3, 1, 4, 2];
+  // Ordena as listas
+  const array = [3, 1, 4, 2,11];
   const array2 = ["Brasil", "Argentina", "Noruega", "Italia"];
 
-  const resultado = array;
+  const resultado = array.sort((a,b) => a - b ); // crescente
   document.getElementById('resultado-sort').textContent = resultado;
-  const resultado2 = array2;
+  const resultado2 = array2.sort().reverse(); // decrescente
   document.getElementById('resultado-sort2').textContent = resultado2;
 }
 
 function executarSlice() {
   const array = ['🍎', '🍌', '🍇', '🍓'];
-  const resultado = array;
+  const resultado = array.slice(1,3);
   document.getElementById('resultado-slice').textContent = resultado;
 }
 
@@ -73,12 +84,14 @@ function executarJoin() {
 
 function executarForEach() {
   const array = ['🍎', '🍌', '🍇'];
+  array.forEach((pegaItem) => console.log(pegaItem))
   const resultado = 'Resultado da operação forEach';
   document.getElementById('resultado-foreach').textContent = resultado;
 }
 
 function executarMap() {
   const array = ['🍎', '🍌', '🍇'];
+  array.map((pegaItem) => console.log(pegaItem + '✅'))
   const resultado = 'Resultado da operação map';
   document.getElementById('resultado-map').textContent = resultado;
 }
