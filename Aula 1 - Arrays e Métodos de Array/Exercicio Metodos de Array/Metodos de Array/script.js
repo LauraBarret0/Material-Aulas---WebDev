@@ -114,7 +114,7 @@ function executarFilter() {
 
 function executarFind() {
   const array =  ['🍎', '🍌', '🍇'];
-  const resultado = 'Resultado da operação find';
+  const resultado = array.filter(pegaItem => pegaItem === ' ');
   document.getElementById('resultado-find').textContent = resultado;
 }
 
@@ -126,7 +126,9 @@ function executarFindIndex() {
 
 function executarReduce() {
   const array = [1, 2, 3, 4];
-  const resultado = 'Resultado da operação reduce';
+  const resultado = array.reduce((totalAcumulado, valorAtual) => {
+    return totalAcumulado + valorAtual
+  },0);
   document.getElementById('resultado-reduce').textContent = resultado;
 }
 
