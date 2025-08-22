@@ -1,7 +1,7 @@
 // Dados de exemplo dos posts
 let posts = [
     {
-        text: "Este é o primeiro post",
+        text: "Este é o primeiro posst",
         category: "Notícias",
         image: "https://placedog.net/150?random=1",
         date: "12/10/2021 12:00:00"
