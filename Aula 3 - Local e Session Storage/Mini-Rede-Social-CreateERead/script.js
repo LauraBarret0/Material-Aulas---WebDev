@@ -80,6 +80,7 @@ function addPost(event) {
     };
     
     posts.unshift(post);
+    savePosts()
     
     document.getElementById('postForm').reset();
     
