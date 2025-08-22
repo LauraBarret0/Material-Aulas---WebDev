@@ -22,6 +22,7 @@ let posts = [
 
 // Inicialização
 window.onload = function() {
+    loadPosts();
     displayPosts();
 
     document.getElementById('postForm').addEventListener('submit', addPost); 
@@ -102,4 +103,16 @@ function deletePost(index){
     }
     
     displayPosts()
+}
+
+
+function savePosts(){
+    localStorage.setItem("posts", JSON.stringify(posts))
+}
+
+function loadPosts(){
+    const postGuardados = localStorage.getItem("posts")
+    if(postGuardados){
+       posts =  JSON.parse(postGuardados)
+    }
 }
