@@ -91,7 +91,7 @@ function addPost(event) {
 function editPost(index){
     const novoTexto = prompt('Edite o conteúdo do post',posts[index].text )
     posts[index].text = novoTexto
-
+    savePosts()
     displayPosts()
 
 }
@@ -101,6 +101,7 @@ function deletePost(index){
     const confirmar = confirm('Você realmente deseja escluir?')
     if(confirmar){
         posts.splice(index,1)
+         savePosts()
     }
     
     displayPosts()
