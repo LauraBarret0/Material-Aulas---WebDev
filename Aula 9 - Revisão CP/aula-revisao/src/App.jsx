@@ -1,4 +1,5 @@
 import Navbar from "./components/NavBar";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
@@ -6,7 +7,8 @@ export default function App() {
       <Navbar />
       <main className="p-6">
         <p className="text-center">Lista de Repositórios </p>
-      </main>
+          <Outlet/>
+        </main>
     </div>
   );
 }
